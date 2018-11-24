@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ActiveRecord::Base.connection.execute <<-SQL
+    INSERT INTO profiles (profile) VALUES ('SuperAdministrador'), ('Administrador'), ('Ventas')
+SQL
