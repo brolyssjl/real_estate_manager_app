@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       flash[:error] = "Something went wrong"
-      render 'new'
+      render action: 'new'
     end
   end
 
@@ -35,7 +35,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       flash[:error] = "Something went wrong"
-      render 'edit'
+      render action: 'edit'
     end
   end
 
