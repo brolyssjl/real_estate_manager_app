@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2018_11_24_181855) do
     t.text "description"
     t.string "logo"
     t.integer "stratum"
-    t.boolean "activated"
+    t.boolean "activated", default: false
     t.string "sales_room_address"
     t.string "sales_room_phone"
     t.string "sales_room_email"
