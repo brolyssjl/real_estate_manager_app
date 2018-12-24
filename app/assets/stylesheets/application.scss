@@ -1,2 +1,11 @@
 @import "node_modules/materialize-css/sass/materialize";
 @import "material_icons";
+body,
+html,
+.login-box {
+  height: 100%;
+}
+
+.pd-25 {
+  padding: 25px !important;
+}
