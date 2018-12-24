@@ -7,7 +7,7 @@ watchify = require 'watchify'
 sourceStream = require 'vinyl-source-stream'
 concat = require 'gulp-concat'
 
-gulp.task 'default', ['scss', 'coffee']
+gulp.task 'default', ['scss', 'coffee', 'fonts']
 
 gulp.task 'scss', ->
   gulp.src 'app/assets/stylesheets/**/*.scss'
@@ -40,3 +40,7 @@ bundleCoffee = (stream) ->
 
 gulp.task 'coffee', ->
   bundleCoffee transformCoffee(coffeeStream)
+
+gulp.task 'fonts', ->
+  gulp.src 'app/assets/fonts/**/*'
+  .pipe gulp.dest 'public/fonts'
