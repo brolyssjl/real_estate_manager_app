@@ -26,8 +26,8 @@ default: &default
 development:
   <<: *default
   database: real_state_db
-  username: real_state_dev
-  password: 'developer123'
+  username: <%= Rails.application.credentials[Rails.env.to_sym][:postgresql][:postgresql_user] %>
+  password: <%= Rails.application.credentials[Rails.env.to_sym][:postgresql][:postgresql_pass] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
